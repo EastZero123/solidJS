@@ -1,3 +1,4 @@
+import { A } from "@solidjs/router"
 import { FiMoreHorizontal } from "solid-icons/fi"
 import { Component, For } from "solid-js"
 import { links } from "./links"
@@ -18,7 +19,7 @@ const MainSidebar: Component = () => {
                 <nav class="flex-it items-start">
                   <For each={links}>
                     {(link) => (
-                      <a
+                      <A
                         class="flex-it items-start flex-grow w-full"
                         href={link.href}
                       >
@@ -28,7 +29,7 @@ const MainSidebar: Component = () => {
                             <span class="truncate">{link.name}</span>
                           </div>
                         </div>
-                      </a>
+                      </A>
                     )}
                   </For>
                 </nav>
